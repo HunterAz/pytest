@@ -93,7 +93,7 @@ pipeline {
                     def scannerHome = tool 'SonarQube';
                     withSonarQubeEnv('SonarQube') {
                         // rmb to change the "projectKey=your_project_name"
-                        sh "${scannerHome}/bin/sonar-scanner -Dsonar.projectKey=3203labtest -Dsonar.sources=."
+                        sh "${scannerHome}/bin/sonar-scanner -Dsonar.projectKey=labtest-sonar -Dsonar.sources=."
 
                         // code not generating report. do not uncomment unless yknow what u doing
                         // sh "${scannerHome}/bin/sonar-scanner -Dsonar.projectKey=test -Dsonar.sources=. -Dsonar.report.export.path=logs/sonar-report.json"
